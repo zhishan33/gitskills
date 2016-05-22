@@ -5,3 +5,12 @@ git tag v0.9 6224937
 git show v0.9
 git tag -a v0.1 -m "version 0.1 released " 3628164
 git tag -s v0.2 -m "signed version 0.2 released" fec145a
+#删除tag
+git tag -d v0.1
+#推送某个标签到远程库
+git push origin v1.0
+#推送全部标签
+git push origin --tags
+#删除远程标签1.先删除本地2.在从远程删除
+git tag -d v0.9
+git push origin :refs/tags/v0.9
