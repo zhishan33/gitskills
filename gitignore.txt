@@ -1,0 +1,7 @@
+#.gitignore文件
+#天加要忽略的文件
+#强制提交被忽略的文件
+git add -f <filename>
+#命令检查
+git check-ignore -v <filename>
+

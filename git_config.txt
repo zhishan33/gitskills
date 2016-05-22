@@ -1,1 +1,16 @@
 git config --global color.ui true
+#配置别名
+#用st 代替status
+git config --global alias.st status
+#用co代替checkout，用ci代替commit，br代替branch
+git config --global alias.co checkout
+git config --global alias.br branch
+#用unstage 代替 reset HEAD
+git config --global alias.unstage 'reset HEAD'
+#用last代替最后一次提交log -l
+git config --global alias.last 'log -l'
+#用lg 代替 log --color --graph --pretty=format:'%Cred%h%Creset -%C(yello)%d%Creset %s %Cgreen(%cr) %C(Bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Crest -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue<%an>%Creset)' --abbrev-commit"
+#配置文件目录
+cat .git/config
+cat .gitconfig
