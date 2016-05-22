@@ -1,0 +1,20 @@
+第一步 安装git
+sudo apt-get install git
+第二部 创建一个git用户，用来运行git服务
+sudo adduser git
+第三步 创建证书登陆
+把用户自己的id_rsa.pub里内容导入到git/.ssh/authorised_keys文件里一行一个
+第四步，初始化git仓库例如sample.git
+sudo git init --bare sample.git
+不让用户直接登陆服务器
+sudo chown -R git:git sample.git
+第五步禁用ｓｈｅｌｌ登陆编辑/etc/passwd
+git:x:1001:1001:,,,:/home/git:/bin/bash
+改为
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+第六步克隆远程仓库
+git clone git@server:/srv/sample.git
+管理公钥
+Gitosis
+管理权限
+Gitolite
