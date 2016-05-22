@@ -1,0 +1,7 @@
+git tag v1.0
+git tag
+git log --pretty=oneline abbrev-commit
+git tag v0.9 6224937
+git show v0.9
+git tag -a v0.1 -m "version 0.1 released " 3628164
+git tag -s v0.2 -m "signed version 0.2 released" fec145a
